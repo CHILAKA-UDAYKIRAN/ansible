@@ -1,4 +1,4 @@
-- name: setup foodapp on webservers
+- name: foodapp on webservers
   hosts: webservers
   become: true
   tasks:
@@ -11,12 +11,10 @@
         name: httpd
         state: started
         enabled: true
-    - name: clone github repo for foodapp
+    - name: clone github repository
       git:
         repo: https://github.com/CHILAKA-UDAYKIRAN/ansible.git
         dest: /var/www/html
-        clone: yes
-        update: yes 
     - name: restart httpd
       service:
         name: httpd
