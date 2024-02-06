@@ -13,7 +13,7 @@
         enabled: true
     - name: clone github repository
       git:
-        repo: https://github.com/CHILAKA-UDAYKIRAN/ansible.git
+        repo: https://github.com/saiurakrishna/food-app.git
         dest: /var/www/html
     - name: restart httpd
       service:
